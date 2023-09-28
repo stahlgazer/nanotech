@@ -5,7 +5,7 @@ export default function HeroBanner() {
   const { isLoaded, isSignedIn, user } = useUser();
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <h1 className="underline decoration-rose-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <h1 className="underline decoration-rose-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
         Nanotech Health
       </h1>
       <p className="text-white bg-slate-600 rounded-full mt-2 p-2 text-xs sm:text-sm md:text-base lg:text-lg">
@@ -19,7 +19,7 @@ export default function HeroBanner() {
         autoPlay
         loop
         muted
-        className="absolute z-[-1] w-auto sm:max-w-full lg:min-w-full min-h-full lg:max-w-none"
+        className="absolute z-[-1] w-auto min-h-full min-w-full max-w-none"
       >
         <source src="animated-background.mp4" />
         Your browser does not support the video tag.

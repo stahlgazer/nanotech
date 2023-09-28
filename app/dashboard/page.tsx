@@ -1,12 +1,13 @@
-"use client";
-import { useUser } from "@clerk/nextjs";
+import SkeletonTests from "@/components/skeleton-tests";
+import Welcome from "@/components/welcome";
 
 export default function Dashboard() {
-    const { isLoaded, isSignedIn, user } = useUser();
-  
-    return (
+  return (
+    <section>
       <div>
-        Welcome back {user?.firstName}
+        <Welcome />
+        <SkeletonTests />
       </div>
-    );
-  }
+    </section>
+  );
+}

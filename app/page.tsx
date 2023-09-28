@@ -7,7 +7,7 @@ export default function Home() {
   const { isLoaded, isSignedIn, user } = useUser();
 
   return (
-    <main>
+    <main className="touch-none">
       <div className="absolute top-0 right-0 p-6 gap-2">
         <UserButton afterSignOutUrl="/" />
       </div>

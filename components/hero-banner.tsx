@@ -4,7 +4,7 @@ import { useUser } from "@clerk/nextjs";
 export default function HeroBanner() {
   const { isLoaded, isSignedIn, user } = useUser();
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen touch-none">
       <h1 className="underline decoration-rose-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
         Nanotech Health
       </h1>

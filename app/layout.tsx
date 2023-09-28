@@ -1,5 +1,6 @@
 import "./globals.css";
-import { ClerkProvider } from '@clerk/nextjs'
+import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -9,19 +10,21 @@ export const metadata: Metadata = {
   title: "Nanotech Health",
   description: "Providing the next generation of healthcare",
 };
- 
+
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            {children}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
-
-

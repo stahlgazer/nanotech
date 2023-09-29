@@ -2,18 +2,28 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { useUser } from "@clerk/nextjs";
+import Image from "next/image";
 export default function HeroBanner() {
   const { isLoaded, isSignedIn, user } = useUser();
   return (
     <div className="flex flex-col justify-center items-center h-screen touch-none">
-      <h1 className="underline decoration-rose-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
+      <h1 className="flex underline decoration-primary text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
         Nanotech Health
       </h1>
-      <p className="text-white bg-slate-600 rounded-full mt-2 p-2 text-xs sm:text-sm md:text-base lg:text-lg">
-        Revolutionizing the way users interact with their healthcare
+      <Image
+        alt="logo"
+        src="/images/heart.png"
+        width={16}
+        height={16}
+        className="m-4"
+      />
+      <p className="text-white bg-slate-600 bg-opacity-50 font-semibold ring rounded-full mt-2 p-2 text-xs sm:text-sm md:text-base lg:text-lg">
+        Revolutionizing the way users interact with healthcare
       </p>
       <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-        <Button className="md:text-lg p-4 m-4 md:p-6">Get Started</Button>
+        <Button className="md:text-lg p-4 m-4 md:p-6 hover:bg-white hover:text-primary">
+          Get Started
+        </Button>
       </Link>
 
       <video

@@ -19,6 +19,14 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="any"
+            href="/images/heart.png"
+          />
+        </head>
         <body className="overflow-hidden">
           <ThemeProvider attribute="class" defaultTheme="system">
             {children}

@@ -27,7 +27,7 @@ export default function RootLayout({
             href="/images/heart.png"
           />
         </head>
-        <body className="overflow-hidden">
+        <body>
           <ThemeProvider attribute="class" defaultTheme="system">
             {children}
           </ThemeProvider>

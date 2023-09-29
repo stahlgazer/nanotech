@@ -13,8 +13,8 @@ export default function HeroBanner() {
       <Image
         alt="robot"
         src="/images/robot.gif"
-        width={64}
-        height={64}
+        width={50}
+        height={50}
         className="m-2"
       />
       <p className="text-white bg-slate-600 bg-opacity-50 font-semibold ring rounded-full p-2 text-xs sm:text-sm md:text-base lg:text-lg">
@@ -25,16 +25,17 @@ export default function HeroBanner() {
           Get Started
         </Button>
       </Link>
-
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute z-[-1] w-auto min-h-full min-w-full max-w-none"
-      >
-        <source src="animated-background.mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="overflow-hidden absolute z-[-1] w-auto min-h-full min-w-full max-w-none">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute min-h-full min-w-full max-w-none"
+        >
+          <source src="animated-background.mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 }

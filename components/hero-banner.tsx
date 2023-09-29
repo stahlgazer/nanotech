@@ -11,13 +11,13 @@ export default function HeroBanner() {
         Nanotech Health
       </h1>
       <Image
-        alt="logo"
-        src="/images/heart.png"
-        width={16}
-        height={16}
-        className="m-4"
+        alt="robot"
+        src="/images/robot.gif"
+        width={64}
+        height={64}
+        className="m-2"
       />
-      <p className="text-white bg-slate-600 bg-opacity-50 font-semibold ring rounded-full mt-2 p-2 text-xs sm:text-sm md:text-base lg:text-lg">
+      <p className="text-white bg-slate-600 bg-opacity-50 font-semibold ring rounded-full p-2 text-xs sm:text-sm md:text-base lg:text-lg">
         Revolutionizing the way users interact with healthcare
       </p>
       <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
